@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos — Axyona | Digital Systems & Creative Lab</title>
+  <meta name="description" content="Conoce a Axyona: el equipo detrás de los sistemas digitales, el diseño y la IA que ayudan a las empresas del Eje Cafetero a operar mejor.">
+  <meta property="og:title" content="Quiénes Somos — Axyona">
+  <meta property="og:description" content="No somos una agencia. Somos un equipo que construye sistemas reales para negocios reales.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://axyona.co/nosotros">
+  <link rel="icon" type="image/png" href="assets/img/isotipo.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>if(localStorage.getItem('axyona-theme')==='dark')document.documentElement.classList.add('dark');</script>
+</head>
+<body>
+
+<!-- PILL NAV (desktop) -->
+<nav class="pill-nav" role="navigation" aria-label="Navegación principal">
+  <div class="pill-nav-inner">
+    <a href="index.html" class="pill-nav-logo" aria-label="Axyona — Inicio">
+      <img src="assets/img/isotipo.png" alt="Axyona" width="24" height="24">
+      Axyona
+    </a>
+    <div class="pill-sep"></div>
+    <a href="index.html"      class="pill-link">Inicio</a>
+    <a href="servicios.html"  class="pill-link">Servicios</a>
+    <a href="nosotros.html"   class="pill-link active">Nosotros</a>
+    <a href="portafolio.html" class="pill-link">Portafolio</a>
+    <a href="contacto.html"   class="pill-link">Contacto</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="contacto.html" class="pill-nav-cta">Hablar con nosotros</a>
+  </div>
+</nav>
+
+<!-- BOTTOM NAV (mobile) -->
+<nav class="bottom-nav" aria-label="Navegación móvil">
+  <a href="index.html" class="bottom-nav-item" aria-label="Inicio">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Inicio</span>
+  </a>
+  <a href="servicios.html" class="bottom-nav-item" aria-label="Servicios">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    <span>Servicios</span>
+  </a>
+  <button class="bottom-nav-item active" id="mobileMenuBtn" aria-label="Menú completo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <span>Menú</span>
+  </button>
+  <a href="contacto.html" class="bottom-nav-cta" aria-label="Diagnóstico gratuito">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span>Hablar</span>
+  </a>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="mobile-drawer-handle"></div>
+  <div class="mobile-drawer-header">
+    <span class="mobile-drawer-title">
+      <img src="assets/img/isotipo.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px;">
+      Axyona
+    </span>
+    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Cerrar menú">×</button>
+  </div>
+  <p class="mobile-drawer-section">Páginas</p>
+  <nav class="mobile-drawer-nav">
+    <a href="index.html" class="mobile-drawer-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Inicio
+    </a>
+    <a href="servicios.html" class="mobile-drawer-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      Servicios
+    </a>
+    <a href="nosotros.html" class="mobile-drawer-link active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      Nosotros
+    </a>
+    <a href="portafolio.html" class="mobile-drawer-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+      Portafolio
+    </a>
+    <a href="contacto.html" class="mobile-drawer-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Contacto
+    </a>
+  </nav>
+  <div class="mobile-drawer-cta">
+    <a href="contacto.html" class="btn btn-primary" style="width:100%;justify-content:center;text-align:center;">Diagnóstico gratuito →</a>
+  </div>
+</div>
+
+
+<main>
+
+<!-- ════════════════════════════════════════════════════════════
+     HERO — Quiénes Somos
+════════════════════════════════════════════════════════════ -->
+<section class="hero" id="nosotros-hero">
+  <div class="aurora-wrap"><div class="aurora-layer"></div></div>
+
+  <div class="hero-inner">
+
+    <div class="hero-content">
+      <div class="hero-eyebrow-chip">
+        <span class="eyebrow-dot-sm"></span>
+        Quiénes Somos · Manizales, Colombia
+      </div>
+      <h1 class="hero-title">
+        <div class="hero-title-line"><span>No somos una</span></div>
+        <div class="hero-title-line"><span><span style="background:linear-gradient(135deg,#7C3AED,#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">agencia.</span></span></div>
+      </h1>
+      <p class="hero-subtitle">
+        Somos un equipo que construye sistemas digitales reales para negocios reales.
+        TI, Diseño e IA integrados — sin intermediarios, sin burocracia, sin promesas vacías.
+      </p>
+      <div class="hero-actions">
+        <a href="#historia" class="btn btn-primary btn-lg">Conocer nuestra historia →</a>
+        <a href="contacto.html" class="btn btn-secondary btn-lg">Hablemos</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-avatars">
+          <div class="avatar-stack">
+            <div class="avatar-dot" style="background:var(--violet)"></div>
+            <div class="avatar-dot" style="background:var(--violet-light)"></div>
+            <div class="avatar-dot" style="background:#A78BFA"></div>
+          </div>
+        </div>
+        <p class="hero-trust-text">
+          Operando desde Manizales · <strong>Eje Cafetero y toda Colombia</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="floating-badge">
+      <div class="badge-header">
+        <span class="badge-title">Axyona en números</span>
+        <span class="badge-subtitle">Lo que hemos construido</span>
+      </div>
+      <div class="badge-divider"></div>
+      <div class="badge-row">
+        <div class="badge-icon badge-icon--violet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="badge-info">
+          <span class="badge-label">Empresas activas</span>
+          <span class="badge-value">+15 clientes en el Eje</span>
+        </div>
+        <span class="badge-check">✓</span>
+      </div>
+      <div class="badge-row">
+        <div class="badge-icon badge-icon--violet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="badge-info">
+          <span class="badge-label">Pilares integrados</span>
+          <span class="badge-value">TI · Diseño · IA</span>
+        </div>
+        <span class="badge-check">✓</span>
+      </div>
+      <div class="badge-row">
+        <div class="badge-icon badge-icon--violet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="badge-info">
+          <span class="badge-label">Respuesta</span>
+          <span class="badge-value">Menos de 24h hábiles</span>
+        </div>
+        <span class="badge-check">✓</span>
+      </div>
+      <div class="badge-divider"></div>
+      <div class="badge-status">
+        <span class="badge-status-dot"></span>
+        Diagnóstico gratuito · Sin compromiso
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     NUESTRA HISTORIA
+════════════════════════════════════════════════════════════ -->
+<section class="section" id="historia">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center;max-width:960px;margin:0 auto;" class="responsive-2col">
+
+      <div class="animate-on-scroll">
+        <p class="section-eyebrow" style="text-align:left;">Nuestra historia</p>
+        <h2 class="section-title" style="text-align:left;font-size:clamp(26px,3.5vw,38px);">
+          Nació de ver<br>el mismo problema<br><span class="accent">una y otra vez.</span>
+        </h2>
+      </div>
+
+      <div class="animate-on-scroll delay-2" style="display:flex;flex-direction:column;gap:20px;">
+        <p style="font-size:15px;line-height:1.75;color:var(--text-secondary);">
+          Las empresas del Eje Cafetero tenían tres problemas separados: sus equipos fallaban y nadie respondía rápido, su imagen digital no representaba lo que realmente eran, y operaban con procesos manuales que consumían horas de trabajo innecesario.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--text-secondary);">
+          Y para cada problema contrataban un proveedor diferente: uno de soporte TI, una agencia de diseño, y si acaso llegaban a hablar de automatización, era con alguien que no entendía su negocio. Tres facturas, tres reuniones de onboarding, tres personas que no se coordinaban entre sí.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--text-secondary);">
+          <strong style="color:var(--text-primary);">Axyona existe para cambiar eso.</strong> Un solo equipo que entiende la tecnología, el diseño y la automatización como un sistema completo — no como servicios aislados.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     POR QUÉ EXISTIMOS
+════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--gray-50);" id="mision">
+  <div class="container">
+
+    <div class="section-header animate-on-scroll" style="max-width:640px;margin:0 auto var(--sp-12);">
+      <p class="section-eyebrow">Por qué existimos</p>
+      <h2 class="section-title">La PyME colombiana<br><span class="accent">merece mejor tecnología.</span></h2>
+      <p class="section-subtitle">
+        No la tecnología cara de las grandes corporaciones. La tecnología que funciona en el día a día de una empresa de 20 personas en Manizales.
+      </p>
+    </div>
+
+    <div class="cards-grid cards-grid-3 animate-on-scroll delay-1">
+
+      <div class="feature-card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 16px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Claridad sobre complejidad</h3>
+        <p class="card-desc">No vendemos tecnología que no entiendes. Te explicamos qué hace, por qué lo hace y qué resultado genera — antes de implementar cualquier cosa.</p>
+      </div>
+
+      <div class="feature-card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 16px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Ejecución sobre consultoría</h3>
+        <p class="card-desc">No cobramos por decirte qué hacer. Cobramos por hacerlo, entregarlo funcionando y responsabilizarnos por los resultados.</p>
+      </div>
+
+      <div class="feature-card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 16px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Sistemas sobre parches</h3>
+        <p class="card-desc">No resolvemos el síntoma. Buscamos el problema de fondo y construimos algo que escale con tu empresa en lugar de romperse en seis meses.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     EL EQUIPO
+════════════════════════════════════════════════════════════ -->
+<section class="section" id="equipo">
+  <div class="container">
+
+    <div class="section-header animate-on-scroll">
+      <p class="section-eyebrow">El equipo</p>
+      <h2 class="section-title">Las personas detrás<br><span class="accent">de los sistemas.</span></h2>
+      <p class="section-subtitle" style="max-width:520px;">Un equipo compacto que prefiere hacer bien pocas cosas que hacer mal muchas.</p>
+    </div>
+
+    <!-- Fundador -->
+    <div style="max-width:720px;margin:0 auto;" class="animate-on-scroll delay-1">
+      <div class="feature-card" style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;border:1px solid var(--violet-light);background:var(--violet-pale);">
+        <!-- Avatar placeholder -->
+        <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A78BFA);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;">
+            <h3 style="font-family:var(--font-heading);font-weight:800;font-size:18px;color:var(--text-primary);margin:0;">Daniel Bedoya</h3>
+            <span style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.2);padding:2px 10px;border-radius:20px;">Fundador</span>
+          </div>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;font-weight:600;">TI · Diseño · IA Aplicada · Manizales</p>
+          <p style="font-size:14px;line-height:1.7;color:var(--text-secondary);margin-bottom:14px;">
+            Combina experiencia en soporte tecnológico, diseño digital y automatización con IA. Trabaja directamente con cada cliente — sin capas intermedias, sin delegarle el contexto a alguien más. Cuando contratas Axyona, hablas con quien ejecuta.
+          </p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:11px;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:3px 10px;color:var(--text-secondary);font-weight:600;">Soporte TI</span>
+            <span style="font-size:11px;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:3px 10px;color:var(--text-secondary);font-weight:600;">Diseño Digital</span>
+            <span style="font-size:11px;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:3px 10px;color:var(--text-secondary);font-weight:600;">Automatización IA</span>
+            <span style="font-size:11px;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:3px 10px;color:var(--text-secondary);font-weight:600;">Desarrollo Web</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colaboradores -->
+    <div style="max-width:720px;margin:var(--sp-8) auto 0;padding:20px 24px;border:1px solid var(--border);border-radius:14px;background:var(--white);display:flex;align-items:center;gap:16px;" class="animate-on-scroll delay-2">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--gray-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+        </svg>
+      </div>
+      <div>
+        <p style="font-weight:700;font-size:13px;color:var(--text-primary);margin-bottom:3px;">Red de colaboradores especializados</p>
+        <p style="font-size:12.5px;color:var(--text-muted);margin:0;">Para proyectos que lo requieren, trabajamos con una red de profesionales de confianza en desarrollo, fotografía, redacción y más. Siempre bajo la dirección y responsabilidad de Axyona.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     VALORES
+════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--gray-50);" id="valores">
+  <div class="container">
+
+    <div class="section-header animate-on-scroll">
+      <p class="section-eyebrow">Cómo operamos</p>
+      <h2 class="section-title">Cuatro principios que<br><span class="accent">no negociamos.</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;" class="animate-on-scroll delay-1">
+
+      <div style="padding:24px;border-radius:14px;background:var(--white);border:1px solid var(--border);">
+        <div style="font-size:28px;margin-bottom:12px;">01</div>
+        <h3 style="font-family:var(--font-heading);font-weight:800;font-size:15px;margin-bottom:8px;color:var(--text-primary);">Honestidad sobre conveniencia</h3>
+        <p style="font-size:13px;line-height:1.65;color:var(--text-muted);margin:0;">Si no somos la solución correcta para tu problema, te lo decimos — aunque eso signifique no cerrar el proyecto.</p>
+      </div>
+
+      <div style="padding:24px;border-radius:14px;background:var(--white);border:1px solid var(--border);">
+        <div style="font-size:28px;margin-bottom:12px;">02</div>
+        <h3 style="font-family:var(--font-heading);font-weight:800;font-size:15px;margin-bottom:8px;color:var(--text-primary);">Propuestas concretas, no estimados vagos</h3>
+        <p style="font-size:13px;line-height:1.65;color:var(--text-muted);margin:0;">Cada propuesta incluye entregables específicos, fechas reales y precio transparente. Sin "depende" sin contexto.</p>
+      </div>
+
+      <div style="padding:24px;border-radius:14px;background:var(--white);border:1px solid var(--border);">
+        <div style="font-size:28px;margin-bottom:12px;">03</div>
+        <h3 style="font-family:var(--font-heading);font-weight:800;font-size:15px;margin-bottom:8px;color:var(--text-primary);">Disponibilidad real, no prometida</h3>
+        <p style="font-size:13px;line-height:1.65;color:var(--text-muted);margin:0;">Respondemos en menos de 24 horas hábiles. No desaparecemos después de entregar — estamos disponibles post-proyecto.</p>
+      </div>
+
+      <div style="padding:24px;border-radius:14px;background:var(--white);border:1px solid var(--border);">
+        <div style="font-size:28px;margin-bottom:12px;">04</div>
+        <h3 style="font-family:var(--font-heading);font-weight:800;font-size:15px;margin-bottom:8px;color:var(--text-primary);">Menos clientes, más profundidad</h3>
+        <p style="font-size:13px;line-height:1.65;color:var(--text-muted);margin:0;">Preferimos trabajar con pocas empresas bien atendidas que escalar rápido y entregar mal. La calidad no es negociable.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     MANIZALES / CONTEXTO LOCAL
+════════════════════════════════════════════════════════════ -->
+<section class="section" id="contexto">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center;max-width:900px;margin:0 auto;" class="responsive-2col">
+
+      <!-- Visual -->
+      <div class="animate-on-scroll" style="order:2;">
+        <div style="background:var(--violet-pale);border:1px solid var(--violet-light);border-radius:16px;padding:32px;text-align:center;">
+          <div style="font-size:48px;margin-bottom:16px;">🏔️</div>
+          <p style="font-family:var(--font-heading);font-weight:800;font-size:22px;color:var(--text-primary);margin-bottom:8px;">Manizales, Colombia</p>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px;">Capital del Eje Cafetero · +2.150 m.s.n.m.</p>
+          <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <p style="font-family:var(--font-heading);font-weight:800;font-size:22px;color:var(--violet);margin:0;">+15</p>
+              <p style="font-size:11px;color:var(--text-muted);margin:0;">Empresas</p>
+            </div>
+            <div style="width:1px;background:var(--border);"></div>
+            <div style="text-align:center;">
+              <p style="font-family:var(--font-heading);font-weight:800;font-size:22px;color:var(--violet);margin:0;">3</p>
+              <p style="font-size:11px;color:var(--text-muted);margin:0;">Pilares</p>
+            </div>
+            <div style="width:1px;background:var(--border);"></div>
+            <div style="text-align:center;">
+              <p style="font-family:var(--font-heading);font-weight:800;font-size:22px;color:var(--violet);margin:0;">100%</p>
+              <p style="font-size:11px;color:var(--text-muted);margin:0;">Directo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="animate-on-scroll" style="order:1;">
+        <p class="section-eyebrow" style="text-align:left;">Dónde operamos</p>
+        <h2 class="section-title" style="text-align:left;font-size:clamp(22px,3vw,32px);">
+          Nacimos aquí.<br><span class="accent">Operamos para Colombia.</span>
+        </h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--text-secondary);margin-bottom:16px;">
+          Somos de Manizales. Conocemos las empresas del Eje Cafetero, sabemos cómo operan, cuáles son sus limitaciones reales y qué tipo de tecnología pueden adoptar sin traumatismos.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--text-secondary);">
+          El Soporte TI presencial lo hacemos en el Eje Cafetero. El Diseño Digital y la IA Aplicada los ofrecemos para cualquier empresa en Colombia y Latinoamérica — sin importar dónde estén.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CTA FINAL
+════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--gray-50);border-top:1px solid var(--gray-100);">
+  <div class="container">
+    <div style="max-width:580px;margin:0 auto;text-align:center;" class="animate-on-scroll">
+      <p class="section-eyebrow">¿Siguiente paso?</p>
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:-0.5px;color:var(--text-primary);margin-bottom:16px;">
+        Cuéntanos sobre<br>tu empresa.
+      </h2>
+      <p style="font-size:15px;color:var(--text-secondary);margin-bottom:var(--sp-8);">
+        Empezamos con un diagnóstico gratuito. Sin compromiso, sin presión. Solo una conversación honesta sobre lo que necesitas.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar diagnóstico gratuito →</a>
+        <a href="servicios.html" class="btn btn-secondary btn-lg">Ver nuestros servicios</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER CINEMATOGRÁFICO
+════════════════════════════════════════════════════════════ -->
+<div class="footer-curtain">
+<footer class="cinematic-footer" role="contentinfo">
+
+  <div class="cf-aurora" aria-hidden="true"></div>
+  <div class="cf-grid"   aria-hidden="true"></div>
+  <div class="cf-giant-text" id="footerGiantText" aria-hidden="true">AXYONA</div>
+
+  <div class="cf-marquee-wrap" aria-hidden="true">
+    <div class="cf-marquee-track">
+      <div class="cf-marquee-item">
+        <span>Soporte TI Empresarial</span><span class="cf-sep">✦</span>
+        <span>Diseño Digital &amp; Web</span><span class="cf-sep">✦</span>
+        <span>IA Aplicada</span><span class="cf-sep">✦</span>
+        <span>Colombia &amp; Latam</span><span class="cf-sep">✦</span>
+        <span>Sin Intermediarios</span><span class="cf-sep">✦</span>
+        <span>Un Solo Equipo</span><span class="cf-sep">✦</span>
+        <span>Resultados Medibles</span><span class="cf-sep">✦</span>
+      </div>
+      <div class="cf-marquee-item">
+        <span>Soporte TI Empresarial</span><span class="cf-sep">✦</span>
+        <span>Diseño Digital &amp; Web</span><span class="cf-sep">✦</span>
+        <span>IA Aplicada</span><span class="cf-sep">✦</span>
+        <span>Colombia &amp; Latam</span><span class="cf-sep">✦</span>
+        <span>Sin Intermediarios</span><span class="cf-sep">✦</span>
+        <span>Un Solo Equipo</span><span class="cf-sep">✦</span>
+        <span>Resultados Medibles</span><span class="cf-sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cf-center">
+    <h2 class="cf-heading" id="footerHeading">
+      ¿Listo para <span class="cf-accent">sistematizar</span><br>tu negocio?
+    </h2>
+    <div class="cf-pills" id="footerPills">
+      <div class="cf-pills-row">
+        <a href="contacto.html" class="cf-pill cf-pill-primary magnetic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 15.5 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          Solicitar diagnóstico gratuito
+        </a>
+        <a href="servicios.html" class="cf-pill cf-pill-secondary magnetic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+          Ver servicios
+        </a>
+      </div>
+      <div class="cf-pills-row">
+        <a href="#" class="cf-pill cf-pill-sm magnetic">Privacidad</a>
+        <a href="#" class="cf-pill cf-pill-sm magnetic">Términos</a>
+        <a href="contacto.html" class="cf-pill cf-pill-sm magnetic">Soporte</a>
+        <a href="index.html" class="cf-pill cf-pill-sm magnetic">Inicio</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cf-bottom">
+    <p class="cf-copy">© 2026 Axyona · Manizales, Colombia</p>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <div class="cf-socials">
+        <a href="#" class="cf-social magnetic" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="#" class="cf-social magnetic" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+      <button class="cf-top-btn magnetic" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</footer>
+</div><!-- /footer-curtain -->
+
+<script src="assets/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  gsap.registerPlugin(ScrollTrigger);
+  const gt = document.getElementById('footerGiantText');
+  if(gt) gsap.fromTo(gt,{y:'12vh',scale:0.85,opacity:0},{y:'0vh',scale:1,opacity:1,ease:'power1.out',scrollTrigger:{trigger:'.footer-curtain',start:'top 85%',end:'bottom bottom',scrub:1.2}});
+  const h = document.getElementById('footerHeading'), p = document.getElementById('footerPills');
+  if(h&&p) gsap.fromTo([h,p],{y:60,opacity:0},{y:0,opacity:1,stagger:0.18,ease:'power3.out',scrollTrigger:{trigger:'.footer-curtain',start:'top 45%',end:'bottom bottom',scrub:1}});
+  document.querySelectorAll('.magnetic').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ el.style.zIndex=10; });
+    el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;gsap.to(el,{x:x*0.38,y:y*0.38,scale:1.06,ease:'power2.out',duration:0.4});});
+    el.addEventListener('mouseleave',()=>{ gsap.to(el,{x:0,y:0,scale:1,ease:'elastic.out(1,0.3)',duration:1.2,onComplete:()=>{ el.style.zIndex=''; }}); });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('axyona-theme', isDark ? 'dark' : 'light');
+  });
+})();
+</script>
+</body>
+</html>
