@@ -12,6 +12,7 @@
   <link rel="canonical" href="https://axyona.co">
   <link rel="icon" type="image/png" href="assets/img/isotipo.png">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>if(localStorage.getItem('axyona-theme')==='dark')document.documentElement.classList.add('dark');</script>
 </head>
 <body>
 
@@ -27,6 +28,10 @@
     <a href="servicios.html"   class="pill-link">Servicios</a>
     <a href="portafolio.html"  class="pill-link">Portafolio</a>
     <a href="contacto.html"    class="pill-link">Contacto</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <a href="contacto.html"    class="pill-nav-cta">Hablar con nosotros</a>
   </div>
 </nav>
@@ -78,20 +83,20 @@
 
       <h1 class="hero-title">
         <div class="hero-title-line">
-          <span>Sistemas que</span>
+          <span>Soluciones que</span>
         </div>
         <div class="hero-title-line" style="margin-top:4px;">
           <div class="rotate-chip" id="rotateChip" aria-live="polite">
             <div class="rotate-text-wrap" id="rotateWrap"></div>
           </div>
-          <span>tu negocio.</span>
+          <span>tu empresa.</span>
         </div>
       </h1>
 
       <p class="hero-subtitle">
-        Integramos <strong>Soporte TI, Diseño Digital e IA Aplicada</strong> en un solo equipo.
-        Sin intermediarios, sin excusas — resultados medibles para tu empresa
-        en Colombia y Latinoamérica.
+        Soporte TI, Diseño Digital e IA Aplicada — <strong>tú eliges cuál necesitas</strong>.
+        Soluciones personalizadas, no catálogos. Sin intermediarios, sin excusas —
+        resultados medibles en Colombia y Latinoamérica.
       </p>
 
       <div class="hero-actions">
@@ -246,11 +251,11 @@
   <div class="container">
 
     <div class="section-header animate-on-scroll">
-      <p class="section-eyebrow">Por qué Axyona</p>
-      <h2 class="section-title">Tecnología completa,<br><span class="accent">sin intermediarios</span></h2>
+      <p class="section-eyebrow">Elige lo que necesites</p>
+      <h2 class="section-title">Tres servicios,<br><span class="accent">cualquier combinación</span></h2>
       <p class="section-subtitle">
-        Tres pilares que operan juntos. Un solo equipo que se responsabiliza
-        por el resultado completo de principio a fin.
+        Cada servicio funciona solo o junto a los demás. Sin paquetes cerrados, sin obligatorios.
+        Tú defines el alcance — nosotros lo ejecutamos.
       </p>
     </div>
 
@@ -265,8 +270,8 @@
         </div>
         <h3 class="card-title">Soporte Tecnológico</h3>
         <p class="card-desc">
-          Mantenimiento preventivo, diagnóstico técnico, redes, recuperación de datos
-          y soporte remoto o presencial — todo en una sola llamada.
+          Infraestructura estable y soporte confiable. Se contrata solo o como base
+          de cualquier otra solución.
         </p>
         <ul class="card-list">
           <li>Mantenimiento preventivo y correctivo</li>
@@ -290,8 +295,8 @@
         </div>
         <h3 class="card-title">Diseño Digital &amp; Web</h3>
         <p class="card-desc">
-          Identidad visual, sitios web de alta conversión, tiendas online y diseño
-          estratégico para cualquier empresa en Colombia y el mundo.
+          Presencia digital profesional desde cero. Funciona solo o integrado
+          con soporte TI o IA para una solución más completa.
         </p>
         <ul class="card-list">
           <li>Identidad visual y branding</li>
@@ -315,8 +320,8 @@
         </div>
         <h3 class="card-title">Inteligencia Artificial Aplicada</h3>
         <p class="card-desc">
-          IA práctica, no experimental. Automatización de procesos, chatbots
-          inteligentes y análisis de datos implementados en flujos reales de tu negocio.
+          IA práctica, no experimental. Se contrata como complemento o de forma
+          independiente para automatizar procesos específicos de tu operación.
         </p>
         <ul class="card-list">
           <li>Automatización de procesos operativos</li>
@@ -332,6 +337,13 @@
       </div>
 
     </div>
+
+    <!-- Banner combinaciones -->
+    <div class="animate-on-scroll" style="margin-top:40px;padding:20px 28px;background:var(--violet-pale);border:1px solid var(--violet-light);border-radius:14px;text-align:center;">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--violet);margin-bottom:6px;">Cualquier combinación. Sin obligatorios.</p>
+      <p style="font-size:14px;color:var(--text-secondary);max-width:560px;margin:0 auto;">Puedes contratar uno, dos o los tres servicios. Empiezas con lo que necesitas hoy y escalas cuando quieras.</p>
+    </div>
+
   </div>
 </section>
 
@@ -360,7 +372,8 @@
 
         <p class="value-body animate-on-scroll" style="margin-top:-8px;">
           Axyona integra los tres en una sola empresa. Tú llamas, nosotros resolvemos.
-          Sin excusas, sin "eso no es nuestro".
+          Sin excusas, sin "eso no es nuestro". Y si solo necesitas uno de los tres servicios,
+          también está bien — así empezaron la mayoría de nuestros clientes.
         </p>
 
         <ul class="value-list mt-6">
@@ -397,6 +410,12 @@
             Resultados medibles desde el primer mes
           </li>
         </ul>
+
+        <div class="animate-on-scroll" style="margin-top:28px;padding:18px 22px;background:var(--violet-pale);border-left:3px solid var(--violet);border-radius:0 10px 10px 0;">
+          <p style="font-family:var(--font-heading);font-weight:700;font-size:13px;color:var(--violet);margin-bottom:4px;">Puedes empezar pequeño y escalar después</p>
+          <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;">Muchos clientes empezaron solo con soporte TI. Con el tiempo sumaron diseño web o automatización. No hay mínimo, no hay obligatorio de contratar todo. <strong style="color:var(--text-primary);">Creces a tu ritmo — nosotros escalamos contigo.</strong></p>
+        </div>
+
       </div>
 
       <!-- Quote derecha -->
@@ -410,26 +429,189 @@
 
         <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);">
           <p style="font-size:12px;color:rgba(255,255,255,0.4);font-family:var(--font-heading);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;">
-            Los 3 pilares
+            Escalable desde el día uno
           </p>
           <div style="display:flex;flex-direction:column;gap:12px;">
             <div style="display:flex;align-items:center;gap:12px;">
               <div style="width:6px;height:6px;border-radius:50%;background:#7C3AED;flex-shrink:0;"></div>
-              <span style="font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;">Integración — conecta lo que ya tienes</span>
+              <span style="font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;">Empieza con un servicio, agrega más cuando quieras</span>
             </div>
             <div style="display:flex;align-items:center;gap:12px;">
               <div style="width:6px;height:6px;border-radius:50%;background:#8B5CF6;flex-shrink:0;"></div>
-              <span style="font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;">Transformación — rediseña con tecnología</span>
+              <span style="font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;">Sin paquetes mínimos ni contratos rígidos</span>
             </div>
             <div style="display:flex;align-items:center;gap:12px;">
               <div style="width:6px;height:6px;border-radius:50%;background:#A78BFA;flex-shrink:0;"></div>
-              <span style="font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;">IA Aplicada — automatiza lo repetitivo</span>
+              <span style="font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;">Cada solución diseñada para tu empresa específica</span>
             </div>
           </div>
         </div>
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     QUÉ PUEDO CONTRATAR — Opciones de contratación
+════════════════════════════════════════════════════════════ -->
+<section class="section" id="opciones">
+  <div class="container">
+
+    <div class="section-header animate-on-scroll">
+      <p class="section-eyebrow">Opciones reales</p>
+      <h2 class="section-title">¿Qué puedo contratar?</h2>
+      <p class="section-subtitle">
+        No hay paquetes obligatorios. Cada combinación es válida.
+        Estas son las más comunes — pero si no es ninguna de estas, también lo hacemos a tu medida.
+      </p>
+    </div>
+
+    <div class="pricing-options animate-on-scroll">
+
+      <div class="option-card">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <span style="font-family:var(--font-heading);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--violet);text-transform:uppercase;background:var(--violet-pale);border:1px solid var(--violet-light);padding:2px 10px;border-radius:99px;">Opción A</span>
+          <h3 class="option-card-title">Solo Soporte TI</h3>
+        </div>
+        <p class="option-card-ideal"><strong>Ideal para:</strong> Empresas con infraestructura que necesitan mantenimiento confiable y soporte técnico mensual.</p>
+        <ul class="option-card-list">
+          <li>Mantenimiento preventivo de equipos</li>
+          <li>Soporte remoto y presencial</li>
+          <li>Configuración y redes</li>
+          <li>Recuperación de datos</li>
+        </ul>
+        <p class="option-card-bottom">Solución personalizada según tu infraestructura</p>
+      </div>
+
+      <div class="option-card">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <span style="font-family:var(--font-heading);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--violet);text-transform:uppercase;background:var(--violet-pale);border:1px solid var(--violet-light);padding:2px 10px;border-radius:99px;">Opción B</span>
+          <h3 class="option-card-title">Solo Diseño &amp; Web</h3>
+        </div>
+        <p class="option-card-ideal"><strong>Ideal para:</strong> Empresas que necesitan sitio web, branding o presencia digital profesional.</p>
+        <ul class="option-card-list">
+          <li>Identidad visual y branding</li>
+          <li>Sitios corporativos y landing pages</li>
+          <li>Tiendas online y ecommerce</li>
+          <li>Diseño para redes sociales</li>
+        </ul>
+        <p class="option-card-bottom">Solución personalizada según tu proyecto</p>
+      </div>
+
+      <div class="option-card option-card--featured">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <span style="font-family:var(--font-heading);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--violet);text-transform:uppercase;background:var(--violet-pale);border:1px solid var(--violet-light);padding:2px 10px;border-radius:99px;">Opción C · Más popular</span>
+          <h3 class="option-card-title">Soporte TI + Diseño</h3>
+        </div>
+        <p class="option-card-ideal"><strong>Ideal para:</strong> Empresas que necesitan infraestructura estable <em>y</em> presencia digital profesional. Así contrató Cootraescal.</p>
+        <ul class="option-card-list">
+          <li>Soporte técnico mensual</li>
+          <li>Sitio web rediseñado</li>
+          <li>Manejo de redes sociales</li>
+          <li>Un solo proveedor, sin coordinación</li>
+        </ul>
+        <p class="option-card-bottom">Solución personalizada según alcance</p>
+      </div>
+
+      <div class="option-card">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <span style="font-family:var(--font-heading);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--violet);text-transform:uppercase;background:var(--violet-pale);border:1px solid var(--violet-light);padding:2px 10px;border-radius:99px;">Opción D</span>
+          <h3 class="option-card-title">Soporte TI + IA Aplicada</h3>
+        </div>
+        <p class="option-card-ideal"><strong>Ideal para:</strong> Empresas que quieren automatizar procesos manuales con infraestructura técnica confiable como base.</p>
+        <ul class="option-card-list">
+          <li>Soporte técnico estable</li>
+          <li>Automatización de procesos operativos</li>
+          <li>Chatbots inteligentes</li>
+          <li>Análisis de datos y dashboards</li>
+        </ul>
+        <p class="option-card-bottom">Solución personalizada según necesidades</p>
+      </div>
+
+      <div class="option-card">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <span style="font-family:var(--font-heading);font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--violet);text-transform:uppercase;background:var(--violet-pale);border:1px solid var(--violet-light);padding:2px 10px;border-radius:99px;">Opción E</span>
+          <h3 class="option-card-title">Todo Integrado</h3>
+        </div>
+        <p class="option-card-ideal"><strong>Ideal para:</strong> Empresas en crecimiento que quieren solución completa de sistemas desde un solo equipo responsable.</p>
+        <ul class="option-card-list">
+          <li>Soporte TI profesional mensual</li>
+          <li>Diseño digital y web</li>
+          <li>Automatización e IA aplicada</li>
+          <li>Un equipo, una responsabilidad total</li>
+        </ul>
+        <p class="option-card-bottom">Solución personalizada según tu alcance</p>
+      </div>
+
+    </div>
+
+    <div class="animate-on-scroll" style="margin-top:40px;padding:28px 32px;background:var(--violet-pale);border:1px solid var(--violet-light);border-radius:16px;text-align:center;">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--text-primary);margin-bottom:8px;">¿No sabes cuál necesitas?</p>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto;">Solicita un diagnóstico gratuito. Analizamos tu situación y te proponemos exactamente lo que tiene sentido para tu negocio.</p>
+      <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar diagnóstico gratuito →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CÓMO FUNCIONA
+════════════════════════════════════════════════════════════ -->
+<section class="section" id="como-funciona" style="background:var(--gray-50);">
+  <div class="container">
+
+    <div class="section-header animate-on-scroll">
+      <p class="section-eyebrow">El proceso</p>
+      <h2 class="section-title">¿Cómo funciona?</h2>
+      <p class="section-subtitle">
+        No vendemos paquetes cerrados. Entendemos tu negocio primero,
+        luego diseñamos tu solución exacta.
+      </p>
+    </div>
+
+    <div style="max-width:680px;margin:0 auto;" class="animate-on-scroll">
+
+      <div class="journey-step">
+        <div class="journey-number">1</div>
+        <div class="journey-content">
+          <h3>Llamada inicial <span style="font-weight:400;color:var(--text-secondary);">— 30 min, sin costo</span></h3>
+          <p>Entendemos qué necesitas exactamente. Preguntas, escucha, sin venta agresiva.</p>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-number">2</div>
+        <div class="journey-content">
+          <h3>Diagnóstico <span style="font-weight:400;color:var(--text-secondary);">— 1 a 2 días</span></h3>
+          <p>Análisis de tu infraestructura, procesos y oportunidades reales de mejora.</p>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-number">3</div>
+        <div class="journey-content">
+          <h3>Propuesta personalizada</h3>
+          <p>Solo lo que necesitas, nada más. Puedes empezar con un servicio y escalar después — sin compromisos mínimos.</p>
+        </div>
+      </div>
+
+      <div class="journey-step" style="margin-bottom:0;">
+        <div class="journey-number">4</div>
+        <div class="journey-content">
+          <h3>Implementación + soporte continuo</h3>
+          <p>Tu equipo, tu cronograma. Nosotros nos responsabilizamos por los resultados.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:40px;" class="animate-on-scroll">
+      <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar diagnóstico gratuito →</a>
+    </div>
+
   </div>
 </section>
 
@@ -477,21 +659,21 @@
     <div class="caso-featured animate-on-scroll">
 
       <div class="caso-left">
-        <div class="caso-eyebrow"><span class="caso-dot"></span>Caso activo · Manizales</div>
+        <div class="caso-eyebrow"><span class="caso-dot"></span>Caso activo · Manizales · 20+ años de operación</div>
         <h3 class="caso-title">Cootraescal</h3>
-        <p class="caso-desc">Cooperativa de transporte escolar con más de 20 años operando en el Eje Cafetero. Llegaron sin presencia digital estructurada y con toda la atención al cliente siendo manual.</p>
+        <p class="caso-desc"><strong>El problema:</strong> Cooperativa de transporte escolar con operación completamente manual — atención al cliente por WhatsApp y llamadas, sin presencia digital estructurada, cuellos de botella en consultas de padres de familia.</p>
         <div class="caso-services">
           <div class="caso-service-item">
+            <div class="caso-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><p class="caso-service-name">Soporte TI</p><p class="caso-service-desc">Mantenimiento de equipos + configuración de red empresarial</p></div>
+          </div>
+          <div class="caso-service-item">
             <div class="caso-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-            <div><p class="caso-service-name">Rediseño Web</p><p class="caso-service-desc">Sitio nuevo desde cero — diseño, estructura y contenido</p></div>
+            <div><p class="caso-service-name">Diseño &amp; Web</p><p class="caso-service-desc">Sitio nuevo desde cero + gestión de redes sociales</p></div>
           </div>
           <div class="caso-service-item">
             <div class="caso-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <div><p class="caso-service-name">Chatbot IA</p><p class="caso-service-desc">Atención automatizada 24/7 para padres de familia</p></div>
-          </div>
-          <div class="caso-service-item">
-            <div class="caso-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.2 4.5 8 5-.9-4.2 4-6.5 7-3.8 1.1 0 3-1.2 4-2.2z"/></svg></div>
-            <div><p class="caso-service-name">Redes Sociales</p><p class="caso-service-desc">Gestión de contenido y comunicación institucional</p></div>
+            <div><p class="caso-service-name">IA Aplicada</p><p class="caso-service-desc">Chatbot inteligente para atención automatizada 24/7</p></div>
           </div>
         </div>
         <a href="portafolio.html" class="btn btn-primary" style="margin-top:8px;">Ver caso completo →</a>
@@ -499,9 +681,9 @@
 
       <div class="caso-right">
         <div class="caso-stats-grid">
-          <div class="caso-stat"><span class="caso-stat-num">3</span><span class="caso-stat-label">Servicios integrados</span></div>
-          <div class="caso-stat"><span class="caso-stat-num">24/7</span><span class="caso-stat-label">Atención automatizada</span></div>
-          <div class="caso-stat"><span class="caso-stat-num">+20</span><span class="caso-stat-label">Años de historia digitalizados</span></div>
+          <div class="caso-stat"><span class="caso-stat-num">3</span><span class="caso-stat-label">Servicios contratados en paralelo</span></div>
+          <div class="caso-stat"><span class="caso-stat-num">24/7</span><span class="caso-stat-label">Atención automática sin personal</span></div>
+          <div class="caso-stat"><span class="caso-stat-num">+30%</span><span class="caso-stat-label">Consultas vía web vs. antes</span></div>
           <div class="caso-stat"><span class="caso-stat-num">1</span><span class="caso-stat-label">Equipo. Sin intermediarios.</span></div>
         </div>
         <div class="caso-soporte-badge">
@@ -969,6 +1151,18 @@
   wrap.appendChild(first);
   setTimeout(() => animateEnter(first), 500);
   setTimeout(() => setInterval(() => { currentIndex = (currentIndex+1) % TEXTS.length; rotateTo(currentIndex); }, INTERVAL), INTERVAL);
+})();
+</script>
+
+<script>
+// Theme toggle
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('axyona-theme', isDark ? 'dark' : 'light');
+  });
 })();
 </script>
 </body>

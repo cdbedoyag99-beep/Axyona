@@ -11,6 +11,7 @@
   <link rel="canonical" href="https://axyona.co/servicios">
   <link rel="icon" type="image/png" href="assets/img/isotipo.png">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>if(localStorage.getItem('axyona-theme')==='dark')document.documentElement.classList.add('dark');</script>
 </head>
 <body>
 
@@ -26,6 +27,10 @@
     <a href="servicios.html"  class="pill-link active">Servicios</a>
     <a href="portafolio.html" class="pill-link">Portafolio</a>
     <a href="contacto.html"   class="pill-link">Contacto</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <a href="contacto.html"   class="pill-nav-cta">Hablar con nosotros</a>
   </div>
 </nav>
@@ -74,12 +79,12 @@
         Nuestros Servicios · Tres pilares integrados
       </div>
       <h1 class="hero-title">
-        <div class="hero-title-line"><span>Tecnología que</span></div>
-        <div class="hero-title-line"><span>trabaja <span style="background:linear-gradient(135deg,#7C3AED,#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">para ti.</span></span></div>
+        <div class="hero-title-line"><span>Soluciones que se</span></div>
+        <div class="hero-title-line"><span>adaptan a tu <span style="background:linear-gradient(135deg,#7C3AED,#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">negocio.</span></span></div>
       </h1>
       <p class="hero-subtitle">
-        <strong>Soporte TI, Diseño Digital e IA Aplicada</strong> — integrados en un solo equipo.
-        Sin intermediarios, sin silos, sin costos ocultos.
+        <strong>Soporte TI, Diseño Digital e IA Aplicada</strong> — contrata uno, dos o los tres pilares según lo que realmente necesitas.
+        Sin paquetes rígidos, sin intermediarios, sin costos ocultos.
       </p>
       <div class="hero-actions">
         <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar diagnóstico gratuito →</a>
@@ -322,7 +327,7 @@ void main(void){
     </div>
 
     <div style="margin-top:40px;text-align:center;" class="animate-on-scroll">
-      <a href="contacto.html" class="btn btn-primary btn-lg">Cotizar soporte para mi empresa</a>
+      <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar diagnóstico gratuito — Soporte TI</a>
     </div>
 
   </div>
@@ -416,7 +421,7 @@ void main(void){
               Diseño que para el scroll, genera engagement y comunica tu marca
               —disponible para empresas en todo el territorio nacional y latinoamérica.
             </p>
-            <a href="contacto.html" class="btn btn-primary mt-4">Solicitar diseño para redes</a>
+            <a href="contacto.html" class="btn btn-primary mt-4">Solicitar diagnóstico gratuito — Diseño</a>
           </div>
         </div>
       </div>
@@ -500,7 +505,7 @@ void main(void){
     </div>
 
     <div style="margin-top:40px;text-align:center;" class="animate-on-scroll">
-      <a href="contacto.html" class="btn btn-primary btn-lg">Explorar IA para mi empresa</a>
+      <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar diagnóstico gratuito — IA</a>
     </div>
 
   </div>
@@ -516,14 +521,14 @@ void main(void){
     <div class="section-header animate-on-scroll">
       <p class="section-eyebrow">Cómo trabajamos</p>
       <h2 class="section-title">Cuatro pasos, cero<br><span class="accent">sorpresas</span></h2>
-      <p class="section-subtitle">Proceso claro, plazos reales, entrega sin excusas.</p>
+      <p class="section-subtitle">Empezamos con un diagnóstico gratuito. Sin compromiso, sin presión.</p>
     </div>
 
     <div class="process-grid">
       <div class="process-step animate-on-scroll delay-1">
         <div class="process-num">01</div>
-        <h3 class="process-title">Diagnóstico</h3>
-        <p class="process-desc">Entendemos tu operación actual, tus problemas reales y lo que necesitas resolver.</p>
+        <h3 class="process-title">Diagnóstico <span style="font-size:11px;font-weight:700;color:#7C3AED;background:var(--violet-pale);padding:2px 8px;border-radius:20px;margin-left:4px;">GRATIS</span></h3>
+        <p class="process-desc">Revisamos tu operación actual sin costo. Te decimos exactamente qué necesitas — y qué no.</p>
       </div>
       <div class="process-step animate-on-scroll delay-2">
         <div class="process-num">02</div>
@@ -599,188 +604,61 @@ void main(void){
 
 
 <!-- ════════════════════════════════════════════════════════════
-     PAQUETES / PRICING
+     MODELOS DE TRABAJO
 ════════════════════════════════════════════════════════════ -->
-<section class="section pricing-section" id="paquetes">
+<section class="section" id="modelos" style="background:var(--gray-50);">
   <div class="container">
 
     <div class="section-header animate-on-scroll">
-      <p class="section-eyebrow">Inversión</p>
-      <h2 class="section-title">Paquetes que escalan<br><span class="accent">con tu empresa</span></h2>
-      <p class="section-subtitle">Precio transparente, entregables claros, sin sorpresas.</p>
+      <p class="section-eyebrow">¿Cómo trabajamos?</p>
+      <h2 class="section-title">Dos formas de<br><span class="accent">trabajar juntos</span></h2>
+      <p class="section-subtitle">Sin paquetes rígidos. Empezamos con un diagnóstico gratuito y construimos la propuesta según tu situación real.</p>
     </div>
 
-    <div class="pricing-board animate-on-scroll delay-1">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:var(--sp-12);" class="animate-on-scroll delay-1">
 
-      <!-- ── COLUMNA IZQUIERDA: Proyecto Único ── -->
-      <div class="pricing-left">
-        <div>
-          <div class="pricing-badge">Proyecto puntual</div>
-          <p class="pricing-plan-name">Proyecto Único</p>
-          <p class="pricing-price">Desde $1.2M</p>
-          <p class="pricing-price-sub">COP · pago único por entregable</p>
-          <p style="font-size:14px;color:var(--text-muted);margin-bottom:0;">
-            Ideal cuando tienes un problema específico que resolver y quieres un entregable concreto sin compromisos recurrentes.
-          </p>
-        </div>
-
-        <a href="contacto.html" class="btn btn-secondary" style="text-align:center;">Solicitar cotización</a>
-
-        <div class="pricing-divider"></div>
-
-        <ul class="pricing-feature-list">
-          <li>
-            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Diagnóstico inicial sin costo
-          </li>
-          <li>
-            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Entregable definido y con fecha real
-          </li>
-          <li>
-            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Soporte post-entrega 30 días
-          </li>
-          <li>
-            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Sin mensualidades obligatorias
-          </li>
-          <li>
-            <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Aplica a los 3 pilares de servicio
-          </li>
+      <!-- Modelo 1: Proyecto puntual -->
+      <div class="feature-card" style="border:1px solid var(--border);">
+        <div style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--text-muted);background:var(--gray-100);border:1px solid var(--border);border-radius:20px;padding:3px 12px;margin-bottom:16px;">Proyecto puntual</div>
+        <h3 class="card-title" style="font-size:20px;margin-bottom:8px;">Proyecto Único</h3>
+        <p class="card-desc">Tienes un problema específico que resolver. Trabajamos en un entregable concreto sin compromisos de largo plazo.</p>
+        <ul class="card-list" style="margin:16px 0;">
+          <li>Diagnóstico inicial sin costo</li>
+          <li>Propuesta con entregables y fechas reales</li>
+          <li>Soporte post-entrega incluido</li>
+          <li>Sin mensualidades obligatorias</li>
+          <li>Aplica a los 3 pilares de servicio</li>
         </ul>
+        <a href="contacto.html" class="btn btn-secondary" style="width:100%;text-align:center;justify-content:center;">Solicitar diagnóstico gratuito →</a>
       </div>
 
-      <!-- ── COLUMNA DERECHA: Alianza Mensual ── -->
-      <div class="pricing-right">
-
-        <!-- Top: precio + gráfica -->
-        <div class="pricing-right-top">
-          <div>
-            <div class="pricing-highlighted-badge">✦ Más popular</div>
-            <p class="pricing-plan-name">Alianza Mensual</p>
-            <p class="pricing-price">Desde $800K</p>
-            <p class="pricing-price-sub">COP / mes · contrato flexible</p>
-            <p style="font-size:14px;color:var(--text-secondary);margin-bottom:0;">
-              Para empresas que quieren operar diferente de forma continua. Soporte, diseño e IA en un solo proveedor — siempre disponible.
-            </p>
-          </div>
-
-          <div class="pricing-chart-card">
-            <div class="pricing-chart-header">
-              <p class="pricing-chart-title">Eficiencia operativa</p>
-              <p class="pricing-chart-subtitle">Empresas con Alianza vs. sin sistema — 12 meses</p>
-            </div>
-            <div class="pricing-chart-body">
-              <canvas id="pricingChart"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <!-- Features + CTAs -->
-        <div class="pricing-right-features">
-          <div>
-            <p class="pricing-features-label">Todo lo de Proyecto Único, más:</p>
-            <ul class="pricing-feature-list">
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Soporte TI mensual incluido
-              </li>
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Actualizaciones y mejoras continuas
-              </li>
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Reunión mensual de revisión y KPIs
-              </li>
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Prioridad de atención garantizada
-              </li>
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Acceso a los 3 pilares simultáneamente
-              </li>
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Implementación de IA en tus procesos
-              </li>
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Dashboard de seguimiento compartido
-              </li>
-              <li>
-                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Cancelación sin penalidad (30 días)
-              </li>
-            </ul>
-          </div>
-
-          <div class="pricing-right-actions">
-            <a href="contacto.html" class="btn btn-primary" style="justify-content:center;">Solicitar diagnóstico</a>
-            <a href="#soporte" class="btn btn-secondary" style="justify-content:center;">Ver servicios</a>
-          </div>
-        </div>
-
+      <!-- Modelo 2: Alianza mensual -->
+      <div class="feature-card" style="border:2px solid var(--violet);background:var(--violet-pale);">
+        <div style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--violet);background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.25);border-radius:20px;padding:3px 12px;margin-bottom:16px;">✦ Recomendado</div>
+        <h3 class="card-title" style="font-size:20px;margin-bottom:8px;">Alianza Mensual</h3>
+        <p class="card-desc">Para empresas que quieren operar diferente de forma continua. Soporte, diseño e IA en un solo proveedor — siempre disponible.</p>
+        <ul class="card-list" style="margin:16px 0;">
+          <li>Todo lo del Proyecto Único</li>
+          <li>Soporte TI mensual incluido</li>
+          <li>Mejoras y actualizaciones continuas</li>
+          <li>Reunión mensual de revisión y KPIs</li>
+          <li>Prioridad de atención garantizada</li>
+          <li>Acceso a los 3 pilares simultáneamente</li>
+          <li>Cancelación sin penalidad (30 días)</li>
+        </ul>
+        <a href="contacto.html" class="btn btn-primary" style="width:100%;text-align:center;justify-content:center;">Solicitar diagnóstico gratuito →</a>
       </div>
-    </div><!-- /pricing-board -->
+
+    </div>
+
+    <div class="animate-on-scroll" style="margin-top:32px;text-align:center;padding:20px;background:var(--white);border:1px solid var(--border);border-radius:12px;">
+      <p style="font-size:14px;color:var(--text-muted);margin:0;">
+        ¿No sabes cuál se adapta mejor? <strong style="color:var(--text);">Cuéntanos tu situación en el diagnóstico gratuito</strong> y te orientamos sin compromiso.
+      </p>
+    </div>
 
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script>
-(function(){
-  const ctx = document.getElementById('pricingChart');
-  if(!ctx) return;
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
-      datasets: [
-        {
-          label: 'Con Alianza Axyona',
-          data: [100,108,119,132,148,162,175,189,202,218,234,252],
-          borderColor: '#7C3AED',
-          backgroundColor: 'rgba(124,58,237,0.08)',
-          borderWidth: 2,
-          pointRadius: 0,
-          tension: 0.4,
-          fill: true,
-        },
-        {
-          label: 'Sin sistema',
-          data: [100,101,102,101,103,104,102,105,104,106,105,107],
-          borderColor: '#D1D5DB',
-          backgroundColor: 'transparent',
-          borderWidth: 1.5,
-          borderDash: [4,4],
-          pointRadius: 0,
-          tension: 0.4,
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: true,
-          position: 'bottom',
-          labels: { font:{size:10,family:"'Plus Jakarta Sans',sans-serif"}, boxWidth:12, padding:12, color:'#6B7280' }
-        },
-        tooltip: { mode:'index', intersect:false }
-      },
-      scales: {
-        x: { grid:{display:false}, ticks:{font:{size:10},color:'#9CA3AF'} },
-        y: { display:false, grid:{display:false} }
-      }
-    }
-  });
-})();
-</script>
 
 </main>
 
@@ -889,6 +767,17 @@ void main(void){
     el.addEventListener('mouseenter',()=>{ el.style.zIndex=10; });
     el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;gsap.to(el,{x:x*0.38,y:y*0.38,scale:1.06,ease:'power2.out',duration:0.4});});
     el.addEventListener('mouseleave',()=>{ gsap.to(el,{x:0,y:0,scale:1,ease:'elastic.out(1,0.3)',duration:1.2,onComplete:()=>{ el.style.zIndex=''; }}); });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('axyona-theme', isDark ? 'dark' : 'light');
   });
 })();
 </script>

@@ -11,6 +11,7 @@
   <link rel="canonical" href="https://axyona.co/contacto">
   <link rel="icon" type="image/png" href="assets/img/isotipo.png">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>if(localStorage.getItem('axyona-theme')==='dark')document.documentElement.classList.add('dark');</script>
 </head>
 <body>
 
@@ -26,6 +27,10 @@
     <a href="servicios.html"  class="pill-link">Servicios</a>
     <a href="portafolio.html" class="pill-link">Portafolio</a>
     <a href="contacto.html"   class="pill-link active">Contacto</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <a href="contacto.html"   class="pill-nav-cta">Hablar con nosotros</a>
   </div>
 </nav>
@@ -109,12 +114,13 @@
         Contacto · Sin ventas agresivas
       </div>
       <h1 class="hero-title">
-        <div class="hero-title-line"><span>Hablemos<span style="background:linear-gradient(135deg,#7C3AED,#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">.</span></span></div>
+        <div class="hero-title-line"><span>Solicita tu</span></div>
+        <div class="hero-title-line"><span>diagnóstico <span style="background:linear-gradient(135deg,#7C3AED,#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">gratuito.</span></span></div>
       </h1>
       <p class="hero-subtitle">
-        Sin formularios eternos ni promesas vacías. Solo una conversación honesta
-        sobre tu empresa y lo que podemos lograr juntos.
-        <strong style="display:block;margin-top:8px;color:var(--text-primary);">La primera consulta no tiene costo.</strong>
+        Sin formularios eternos ni promesas vacías. Te revisamos la operación,
+        te decimos qué puedes mejorar y cómo — sin compromiso.
+        <strong style="display:block;margin-top:8px;color:var(--text-primary);">Costo: $0. Compromiso: ninguno.</strong>
       </p>
       <div class="hero-actions">
         <a href="#formulario" class="btn btn-primary btn-lg">Enviar mensaje →</a>
@@ -185,6 +191,46 @@
 
 
 <!-- ════════════════════════════════════════════════════════════
+     ¿CUÁL ES TU SITUACIÓN?
+════════════════════════════════════════════════════════════ -->
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-header animate-on-scroll" style="margin-bottom:var(--sp-8);">
+      <p class="section-eyebrow">Antes de escribirnos</p>
+      <h2 class="section-title" style="font-size:clamp(20px,2.8vw,30px);">¿Cuál es tu <span class="accent">situación</span>?</h2>
+      <p class="section-subtitle" style="font-size:14px;">Identifica tu caso — así podemos prepararte una respuesta más útil desde el primer mensaje.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:var(--sp-8);" class="animate-on-scroll delay-1">
+      <div class="feature-card" style="padding:16px 18px;cursor:pointer;" onclick="document.getElementById('servicio').value='soporte-ti';document.getElementById('formulario').scrollIntoView({behavior:'smooth'});">
+        <div style="font-size:20px;margin-bottom:8px;">🖥️</div>
+        <p style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--text-primary);">Mis equipos fallan constantemente</p>
+        <p style="font-size:12px;color:var(--text-muted);margin:0;">Necesito soporte TI confiable para mi empresa.</p>
+      </div>
+      <div class="feature-card" style="padding:16px 18px;cursor:pointer;" onclick="document.getElementById('servicio').value='diseno-web';document.getElementById('formulario').scrollIntoView({behavior:'smooth'});">
+        <div style="font-size:20px;margin-bottom:8px;">🌐</div>
+        <p style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--text-primary);">No tengo presencia digital</p>
+        <p style="font-size:12px;color:var(--text-muted);margin:0;">Quiero un sitio web o identidad visual profesional.</p>
+      </div>
+      <div class="feature-card" style="padding:16px 18px;cursor:pointer;" onclick="document.getElementById('servicio').value='ia-aplicada';document.getElementById('formulario').scrollIntoView({behavior:'smooth'});">
+        <div style="font-size:20px;margin-bottom:8px;">🤖</div>
+        <p style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--text-primary);">Hago todo manual y es lento</p>
+        <p style="font-size:12px;color:var(--text-muted);margin:0;">Quiero automatizar procesos y usar IA en mi empresa.</p>
+      </div>
+      <div class="feature-card" style="padding:16px 18px;cursor:pointer;" onclick="document.getElementById('servicio').value='multiple';document.getElementById('formulario').scrollIntoView({behavior:'smooth'});">
+        <div style="font-size:20px;margin-bottom:8px;">⚙️</div>
+        <p style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--text-primary);">Necesito varias cosas a la vez</p>
+        <p style="font-size:12px;color:var(--text-muted);margin:0;">Quiero TI + Diseño + IA en un solo proveedor.</p>
+      </div>
+      <div class="feature-card" style="padding:16px 18px;cursor:pointer;" onclick="document.getElementById('servicio').value='orientacion';document.getElementById('formulario').scrollIntoView({behavior:'smooth'});">
+        <div style="font-size:20px;margin-bottom:8px;">🧭</div>
+        <p style="font-weight:700;font-size:13px;margin-bottom:4px;color:var(--text-primary);">No sé qué necesito</p>
+        <p style="font-size:12px;color:var(--text-muted);margin:0;">Sé que hay algo que mejorar pero no sé por dónde empezar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
      FORMULARIO + INFO
 ════════════════════════════════════════════════════════════ -->
 <section class="section" id="formulario">
@@ -193,9 +239,10 @@
 
       <!-- ── FORMULARIO ────────────────────────────────────── -->
       <div class="animate-on-scroll">
-        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:22px;letter-spacing:-0.4px;color:var(--text-primary);margin-bottom:var(--sp-6);">
-          Cuéntanos sobre tu empresa
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:22px;letter-spacing:-0.4px;color:var(--text-primary);margin-bottom:4px;">
+          Solicita tu diagnóstico gratuito
         </h2>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:var(--sp-6);">Completa el formulario — te respondemos en menos de 24h con un análisis real.</p>
 
         <!-- Estado de éxito (oculto por defecto) -->
         <div class="form-success" id="form-success">
@@ -295,6 +342,32 @@
               <option value="orientacion">No sé, necesito orientación</option>
             </select>
             <span class="form-error">Por favor selecciona una opción</span>
+          </div>
+
+          <!-- Tamaño empresa + Presupuesto -->
+          <div class="form-row" style="margin-top:var(--sp-4);">
+            <div class="form-group">
+              <label class="form-label" for="tamano">Tamaño de tu empresa</label>
+              <select id="tamano" name="tamano" class="form-select">
+                <option value="" disabled selected>Selecciona</option>
+                <option value="1-5">1 – 5 personas</option>
+                <option value="6-20">6 – 20 personas</option>
+                <option value="21-50">21 – 50 personas</option>
+                <option value="51-100">51 – 100 personas</option>
+                <option value="100+">Más de 100</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="presupuesto">Presupuesto mensual aprox.</label>
+              <select id="presupuesto" name="presupuesto" class="form-select">
+                <option value="" disabled selected>Selecciona</option>
+                <option value="explorando">Aún explorando opciones</option>
+                <option value="bajo-1m">Menos de $1M COP</option>
+                <option value="1-3m">$1M – $3M COP</option>
+                <option value="3-5m">$3M – $5M COP</option>
+                <option value="5m+">Más de $5M COP</option>
+              </select>
+            </div>
           </div>
 
           <!-- Mensaje -->
@@ -420,6 +493,73 @@
   </div>
 </section>
 
+
+<!-- ════════════════════════════════════════════════════════════
+     LO QUE PUEDES ESPERAR
+════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--gray-50);padding:var(--sp-12) 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:start;max-width:900px;margin:0 auto;" class="responsive-2col">
+
+      <!-- Lo que puedes esperar -->
+      <div class="animate-on-scroll">
+        <p class="section-eyebrow" style="text-align:left;">Después de escribirnos</p>
+        <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;letter-spacing:-0.3px;margin-bottom:var(--sp-6);color:var(--text-primary);">Lo que puedes esperar</h3>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:var(--violet);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">1</div>
+            <div><p style="font-weight:700;font-size:13px;margin-bottom:2px;color:var(--text-primary);">Respuesta en menos de 24h hábiles</p><p style="font-size:12px;color:var(--text-muted);margin:0;">Te escribimos directamente — sin bots, sin formularios de seguimiento.</p></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:var(--violet);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">2</div>
+            <div><p style="font-weight:700;font-size:13px;margin-bottom:2px;color:var(--text-primary);">Diagnóstico real de tu situación</p><p style="font-size:12px;color:var(--text-muted);margin:0;">Te decimos qué tiene sentido resolver primero — y por qué. Sin vender lo que no necesitas.</p></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:var(--violet);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">3</div>
+            <div><p style="font-weight:700;font-size:13px;margin-bottom:2px;color:var(--text-primary);">Propuesta a medida (si aplica)</p><p style="font-size:12px;color:var(--text-muted);margin:0;">Si hay fit, te enviamos una propuesta con entregables claros, tiempos y precio. Tú decides.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="animate-on-scroll delay-2">
+        <p class="section-eyebrow" style="text-align:left;">Preguntas frecuentes</p>
+        <h3 style="font-family:var(--font-heading);font-weight:800;font-size:20px;letter-spacing:-0.3px;margin-bottom:var(--sp-6);color:var(--text-primary);">Antes de escribirnos</h3>
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <details style="border-bottom:1px solid var(--gray-100);padding:14px 0;">
+            <summary style="font-size:13px;font-weight:700;color:var(--text-primary);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              ¿El diagnóstico realmente es gratis?
+              <span style="color:var(--violet);font-size:16px;font-weight:400;">+</span>
+            </summary>
+            <p style="font-size:12.5px;color:var(--text-muted);margin:10px 0 0;">Sí. Sin letra pequeña. Revisamos tu situación, te damos orientación honesta y solo seguimos si hay algo concreto que podemos hacer juntos.</p>
+          </details>
+          <details style="border-bottom:1px solid var(--gray-100);padding:14px 0;">
+            <summary style="font-size:13px;font-weight:700;color:var(--text-primary);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              ¿Tienen mínimo de contrato?
+              <span style="color:var(--violet);font-size:16px;font-weight:400;">+</span>
+            </summary>
+            <p style="font-size:12.5px;color:var(--text-muted);margin:10px 0 0;">No. Puedes contratar un proyecto puntual sin compromiso de continuidad. Para la Alianza Mensual el contrato es flexible — cancelas con 30 días de aviso.</p>
+          </details>
+          <details style="border-bottom:1px solid var(--gray-100);padding:14px 0;">
+            <summary style="font-size:13px;font-weight:700;color:var(--text-primary);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              ¿Solo trabajan en Manizales?
+              <span style="color:var(--violet);font-size:16px;font-weight:400;">+</span>
+            </summary>
+            <p style="font-size:12.5px;color:var(--text-muted);margin:10px 0 0;">El Soporte TI presencial es Eje Cafetero. Diseño e IA los hacemos para cualquier empresa de Colombia y Latinoamérica.</p>
+          </details>
+          <details style="padding:14px 0;">
+            <summary style="font-size:13px;font-weight:700;color:var(--text-primary);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              ¿Puedo contratar solo uno de los servicios?
+              <span style="color:var(--violet);font-size:16px;font-weight:400;">+</span>
+            </summary>
+            <p style="font-size:12.5px;color:var(--text-muted);margin:10px 0 0;">Sí. No hay paquetes obligatorios. Contratas lo que necesitas — uno, dos o los tres pilares según tu situación real.</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ════════════════════════════════════════════════════════════
      CIERRE — ANTES DE IR (mini CTA texto)
@@ -561,6 +701,17 @@
     el.addEventListener('mouseenter',()=>{ el.style.zIndex=10; });
     el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;gsap.to(el,{x:x*0.38,y:y*0.38,scale:1.06,ease:'power2.out',duration:0.4});});
     el.addEventListener('mouseleave',()=>{ gsap.to(el,{x:0,y:0,scale:1,ease:'elastic.out(1,0.3)',duration:1.2,onComplete:()=>{ el.style.zIndex=''; }}); });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('axyona-theme', isDark ? 'dark' : 'light');
   });
 })();
 </script>

@@ -11,6 +11,7 @@
   <link rel="canonical" href="https://axyona.co/portafolio">
   <link rel="icon" type="image/png" href="assets/img/isotipo.png">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>if(localStorage.getItem('axyona-theme')==='dark')document.documentElement.classList.add('dark');</script>
 </head>
 <body>
 
@@ -26,6 +27,10 @@
     <a href="servicios.html"  class="pill-link">Servicios</a>
     <a href="portafolio.html" class="pill-link active">Portafolio</a>
     <a href="contacto.html"   class="pill-link">Contacto</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <a href="contacto.html"   class="pill-nav-cta">Hablar con nosotros</a>
   </div>
 </nav>
@@ -110,7 +115,7 @@
       </p>
       <div class="hero-actions">
         <a href="#cootraescal" class="btn btn-primary btn-lg">Ver caso Cootraescal →</a>
-        <a href="contacto.html" class="btn btn-secondary btn-lg">Quiero un proyecto así</a>
+        <a href="contacto.html" class="btn btn-secondary btn-lg">Diagnóstico gratuito para mi empresa</a>
       </div>
       <div class="hero-trust">
         <div class="hero-trust-avatars">
@@ -287,8 +292,8 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
       </div>
       <div class="pf-soporte-text">
-        <p class="pf-soporte-title">Soporte TI activo para 6+ empresas más</p>
-        <p class="pf-soporte-sub">Cootraescal, Coopesena, Casa Autos, Constructora Hungría, Grupo TM y Disblanco confían en Axyona para el mantenimiento y soporte tecnológico de su operación diaria. Casos completos próximamente.</p>
+        <p class="pf-soporte-title">Soporte TI activo para más empresas del Eje Cafetero</p>
+        <p class="pf-soporte-sub">Varias empresas de Manizales y la región confían en Axyona para el mantenimiento y soporte tecnológico de su operación diaria. Casos documentados próximamente.</p>
       </div>
       <div class="pf-soporte-badge-num">6+</div>
     </div>
@@ -311,21 +316,21 @@
     <div class="pf-coming-grid animate-on-scroll">
       <div class="pf-coming-card">
         <div class="pf-coming-tag">Soporte TI</div>
-        <p class="pf-coming-name">Coopesena</p>
-        <p class="pf-coming-desc">Mantenimiento preventivo y soporte remoto para equipos de la cooperativa.</p>
-        <span class="pf-coming-status">Documentando</span>
+        <p class="pf-coming-name">Empresa de transporte</p>
+        <p class="pf-coming-desc">Mantenimiento preventivo y soporte remoto para los equipos de la empresa.</p>
+        <span class="pf-coming-status">Próximamente</span>
       </div>
       <div class="pf-coming-card">
         <div class="pf-coming-tag">Soporte TI</div>
-        <p class="pf-coming-name">Casa Autos</p>
-        <p class="pf-coming-desc">Soporte tecnológico continuo para la operación del concesionario.</p>
-        <span class="pf-coming-status">Documentando</span>
+        <p class="pf-coming-name">Empresa automotriz</p>
+        <p class="pf-coming-desc">Soporte tecnológico continuo para equipos, red y sistemas de la operación.</p>
+        <span class="pf-coming-status">Próximamente</span>
       </div>
       <div class="pf-coming-card">
-        <div class="pf-coming-tag">Soporte TI</div>
-        <p class="pf-coming-name">Constructora Hungría</p>
-        <p class="pf-coming-desc">Infraestructura y soporte para equipos en obra y oficina.</p>
-        <span class="pf-coming-status">Documentando</span>
+        <div class="pf-coming-tag">Soporte TI + Diseño</div>
+        <p class="pf-coming-name">Empresa constructora</p>
+        <p class="pf-coming-desc">Infraestructura de red y soporte técnico para equipos en obra y oficina.</p>
+        <span class="pf-coming-status">Próximamente</span>
       </div>
     </div>
 
@@ -450,5 +455,15 @@
 </script>
 <script src="assets/main.js"></script>
 
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('axyona-theme', isDark ? 'dark' : 'light');
+  });
+})();
+</script>
 </body>
 </html>
