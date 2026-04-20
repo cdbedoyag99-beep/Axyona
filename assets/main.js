@@ -176,4 +176,47 @@
     document.head.appendChild(style);
   }
 
+
+  /* ── MOBILE DRAWER ───────────────────────────────────────────── */
+  const drawerOverlay = document.getElementById('mobileDrawerOverlay');
+  const drawer        = document.getElementById('mobileDrawer');
+  const drawerOpenBtn = document.getElementById('mobileMenuBtn');
+  const drawerCloseBtn= document.getElementById('mobileDrawerClose');
+
+  function openDrawer() {
+    if (!drawer || !drawerOverlay) return;
+    drawerOverlay.style.display = 'block';
+    requestAnimationFrame(() => {
+      drawerOverlay.classList.add('open');
+      drawer.classList.add('open');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    if (!drawer || !drawerOverlay) return;
+    drawerOverlay.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => { drawerOverlay.style.display = 'none'; }, 320);
+  }
+
+  if (drawerOpenBtn)  drawerOpenBtn.addEventListener('click', openDrawer);
+  if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+  if (drawerOverlay)  drawerOverlay.addEventListener('click', closeDrawer);
+
+  // Close on nav link click
+  if (drawer) {
+    drawer.querySelectorAll('.mobile-drawer-link').forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
+  }
+
+  // Swipe down to close
+  if (drawer) {
+    let startY = 0;
+    drawer.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+    drawer.addEventListener('touchend',   e => { if (e.changedTouches[0].clientY - startY > 60) closeDrawer(); }, { passive: true });
+  }
+
 })();
